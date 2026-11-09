@@ -1,0 +1,74 @@
+[project]
+name = "pmhras"
+version = "0.1.0"
+description = "Prédiction du risque de santé mentale chez les étudiants"
+readme = "README.md"
+authors = [
+    { name = "zakaria allam", email = "zakariaallam536@gmail.com" }
+]
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<3",
+    "scipy>=1.13",
+    "scikit-learn>=1.5,<2",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-cov>=5.0",
+    "ruff>=0.7",
+    "mypy>=1.11",
+    "pre-commit>=4.0",
+    "ipykernel>=6.29",
+    "jupyter>=1.1",
+]
+
+
+[project.scripts]
+pmhras = "pmhras.cli:main"
+
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "B",
+    "UP",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.uv.build-backend]
+module-name = "pmhras"
+module-root = "src"

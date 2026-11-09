@@ -1,0 +1,43 @@
+project:
+  name: Prédiction du risque de santé mentale chez les étudiants
+  environment: development
+
+data:
+  raw_path: data/raw/student_mental_health.csv
+  encoding: utf-8
+  separator: ","
+  target_column: null
+  id_columns: []
+
+audit:
+  check_missing_values: true
+  check_duplicates: true
+  check_data_types: true
+  check_inconsistencies: true
+  check_outliers: true
+  calculate_descriptive_statistics: true
+  analyze_target_distribution: true
+  analyze_feature_relationships: true
+  calculate_correlations: true
+
+  outliers:
+    method: iqr
+    multiplier: 1.5
+    action: report_only
+
+  missing_values:
+    warning_threshold: 0.05
+    critical_threshold: 0.30
+
+  cardinality:
+    max_categories_for_crosstab: 30
+
+report:
+  output_dir: artifacts/reports
+  filename: data_audit_report.json
+  save_json: true
+
+logging:
+  level: INFO
+  directory: logs
+  filename: data_audit.log   
