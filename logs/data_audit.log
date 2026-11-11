@@ -1,0 +1,122 @@
+2026-11-10 22:12:40 | INFO | __main__ | Starting data Audit
+2026-11-10 22:12:40 | INFO | __main__ | Loading Dataset data\raw\student_mental_health.csv 
+2026-11-10 22:12:40 | ERROR | __main__ | Error unixpected during data audit
+Traceback (most recent call last):
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 315, in main
+    run_audit(args.config)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 249, in run_audit
+    df = load_dataset(config)
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 43, in load_dataset
+    if df.empty():
+       ~~~~~~~~^^
+TypeError: 'bool' object is not callable
+2026-11-10 22:15:52 | INFO | __main__ | Starting data Audit
+2026-11-10 22:15:52 | INFO | __main__ | Loading Dataset data\raw\student_mental_health.csv 
+2026-11-10 22:15:52 | ERROR | __main__ | Error unixpected during data audit
+Traceback (most recent call last):
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 315, in main
+    run_audit(args.config)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 249, in run_audit
+    df = load_dataset(config)
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 43, in load_dataset
+    if df.empty():
+       ~~~~~~~~^^
+TypeError: 'bool' object is not callable
+2026-11-10 22:22:06 | INFO | __main__ | Starting data Audit
+2026-11-10 22:22:06 | INFO | __main__ | Loading Dataset data\raw\student_mental_health.csv 
+2026-11-10 22:22:06 | INFO | __main__ | data loading successfuly, 2000 rows , 17 columns
+2026-11-10 22:22:06 | INFO | __main__ | inspecting dataset structure
+2026-11-10 22:22:06 | INFO | __main__ | Analizing Missing Value
+2026-11-10 22:22:06 | INFO | __main__ | ckecking duplicated row
+2026-11-10 22:22:06 | INFO | __main__ | Analisation outliers
+2026-11-10 22:22:06 | INFO | __main__ | Generation statistiques descriptives
+2026-11-10 22:22:06 | INFO | __main__ | Analizing target column 
+2026-11-10 22:22:06 | INFO | __main__ | Calculation numeric correlation
+2026-11-10 22:22:06 | ERROR | __main__ | Error unixpected during data audit
+Traceback (most recent call last):
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 315, in main
+    run_audit(args.config)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 287, in run_audit
+    json.dump(
+    ~~~~~~~~~^
+        report,
+        ^^^^^^^
+    ...<3 lines>...
+        allow_nan=False
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\__init__.py", line 181, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 435, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 328, in _iterencode_list
+    yield from chunks
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 401, in _iterencode_dict
+    yield _floatstr(value)
+          ~~~~~~~~~^^^^^^^
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 242, in floatstr
+    raise ValueError(
+        "Out of range float values are not JSON compliant: " +
+        repr(o))
+ValueError: Out of range float values are not JSON compliant: nan
+2026-11-10 22:28:39 | INFO | __main__ | Starting data Audit
+2026-11-10 22:28:39 | INFO | __main__ | Loading Dataset data\raw\student_mental_health.csv 
+2026-11-10 22:28:39 | INFO | __main__ | data loading successfuly, 2000 rows , 17 columns
+2026-11-10 22:28:39 | INFO | __main__ | inspecting dataset structure
+2026-11-10 22:28:39 | INFO | __main__ | Analizing Missing Value
+2026-11-10 22:28:39 | INFO | __main__ | ckecking duplicated row
+2026-11-10 22:28:39 | INFO | __main__ | Analisation outliers
+2026-11-10 22:28:39 | INFO | __main__ | Generation statistiques descriptives
+2026-11-10 22:28:39 | INFO | __main__ | Analizing target column 
+2026-11-10 22:28:39 | INFO | __main__ | Calculation numeric correlation
+2026-11-10 22:28:39 | ERROR | __main__ | Error unixpected during data audit
+Traceback (most recent call last):
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 315, in main
+    run_audit(args.config)
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Youcode\Desktop\PMHRAS\src\pmhras\data\audit.py", line 287, in run_audit
+    json.dump(
+    ~~~~~~~~~^
+        report,
+        ^^^^^^^
+    ...<3 lines>...
+        allow_nan=True
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\__init__.py", line 181, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 435, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "C:\Users\Youcode\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\json\encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type DataFrame is not JSON serializable
+2026-11-10 22:31:11 | INFO | __main__ | Starting data Audit
+2026-11-10 22:31:11 | INFO | __main__ | Loading Dataset data\raw\student_mental_health.csv 
+2026-11-10 22:31:11 | INFO | __main__ | data loading successfuly, 2000 rows , 17 columns
+2026-11-10 22:31:11 | INFO | __main__ | inspecting dataset structure
+2026-11-10 22:31:11 | INFO | __main__ | Analizing Missing Value
+2026-11-10 22:31:11 | INFO | __main__ | ckecking duplicated row
+2026-11-10 22:31:11 | INFO | __main__ | Analisation outliers
+2026-11-10 22:31:11 | INFO | __main__ | Generation statistiques descriptives
+2026-11-10 22:31:11 | INFO | __main__ | Analizing target column 
+2026-11-10 22:31:11 | INFO | __main__ | Calculation numeric correlation
+2026-11-10 22:31:11 | INFO | __main__ | audit report saved in artifacts\reports\data_audit_report.json
+2026-11-10 22:31:11 | INFO | __main__ | data audit completed successfully

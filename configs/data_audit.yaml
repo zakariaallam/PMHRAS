@@ -6,19 +6,17 @@ data:
   raw_path: data/raw/student_mental_health.csv
   encoding: utf-8
   separator: ","
-  target_column: null
-  id_columns: []
+  target_column: Mental_Health_Risk
+  id_columns: ["Student_ID"]
 
 audit:
-  check_missing_values: true
-  check_duplicates: true
-  check_data_types: true
-  check_inconsistencies: true
-  check_outliers: true
-  calculate_descriptive_statistics: true
-  analyze_target_distribution: true
-  analyze_feature_relationships: true
-  calculate_correlations: true
+  check_missing_values: True
+  check_duplicates: True
+  check_inconsistencies: True
+  check_outliers: True
+  descriptive_statistics: True
+  target_distribution: True
+  calculate_correlations: True
 
   outliers:
     method: iqr
@@ -35,7 +33,7 @@ audit:
 report:
   output_dir: artifacts/reports
   filename: data_audit_report.json
-  save_json: true
+  save_json: True
 
 logging:
   level: INFO
