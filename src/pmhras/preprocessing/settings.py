@@ -1,7 +1,7 @@
 class PrepeocessingError(Exception):
     pass
 
-class FeatureValidationErro(PrepeocessingError):
+class FeatureValidationError(PrepeocessingError):
     pass
 
 class OrdinalConfigurationError(PrepeocessingError):
